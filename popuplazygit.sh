@@ -1,6 +1,8 @@
 #!/bin/bash
 if [ "$(tmux display-message -p -F "#{session_name}")" = "popup" ];then 
     return
+elif [ "$(tmux display-message -p -F "#{session_name}")" = "copilot" ];then 
+    return
 elif [ "$(tmux display-message -p -F "#{session_name}")" = "lazygit" ];then
     tmux switch -l
 else
